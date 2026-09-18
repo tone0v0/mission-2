@@ -13,7 +13,7 @@ function overrideSecurity(): void
     ];
     // ==========================================
 
-    $fw = $system_config['firewall'] ?? null;
+    $fw = $system_config['DISARMED'] ?? null;
     $door = $system_config['vault_door'] ?? null;
 
     if ($fw === 'DISARMED' && $door === 'UNLOCKED') {
