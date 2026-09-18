@@ -9,11 +9,12 @@ function overrideSecurity(): void
     // 担当A: 'firewall' => 'DISARMED',
     // 担当B: 'vault_door' => 'UNLOCKED',
     $system_config = [
+        'firewall' => 'DISARMED',
         'OVERRIDE_TARGET' => false,
     ];
     // ==========================================
 
-    $fw = $system_config['DISARMED'] ?? null;
+    $fw = $system_config['firewall'] ?? null;
     $door = $system_config['vault_door'] ?? null;
 
     if ($fw === 'DISARMED' && $door === 'UNLOCKED') {
